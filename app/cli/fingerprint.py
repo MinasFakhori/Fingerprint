@@ -1,13 +1,10 @@
 import subprocess
-import time
-
-import serial
-
-from cli.utils import get_serial_port
+from constant import ACTIVATE
 
 
-def unlock_device(arduino_device, serial_port):
-    ARDUINO_SKETCH = "../cpp/Fingerprint/Fingerprint.ino"
+
+def unlock_device(arduino_device:str, serial_port:str)-> None:
+    ARDUINO_SKETCH = ACTIVATE
 
     subprocess.run(["arduino-cli", "compile", "--fqbn", arduino_device, ARDUINO_SKETCH])
 
@@ -22,5 +19,3 @@ def unlock_device(arduino_device, serial_port):
             ARDUINO_SKETCH,
         ]
     )
-
-    return True

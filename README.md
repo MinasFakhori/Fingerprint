@@ -2,7 +2,7 @@
 
 ### Overview
 
-This project involves creating a biometric security system that utilizes an Arduino and a fingerprint scanner to unlock a PC or Mac. The system works by capturing and verifying fingerprints, allowing authorized users to access their computers.
+This project involves creating a biometric security system that utilises an Arduino and a fingerprint scanner to unlock a PC or Mac. The system works by capturing and verifying fingerprints, allowing authorized users to access their computers.
 
 --- 
 ### Requirements (Hardware)
