@@ -1,0 +1,1 @@
+#define DUAL_DEVICES true
