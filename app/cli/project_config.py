@@ -1,9 +1,9 @@
 from cli.utils import (get_arduino_device, get_dual_device_ans,
                        get_serial_port, write_data_to_h_file)
-
 from constant import PROJECT_CONFIG
 
-def project_config_base(project_type:str, fun: function, isDual: bool) -> None:
+
+def project_config_base(project_type: str, fun: function, isDual: bool) -> None:
     old = "no {project_type}"
     user_input = ""
     new = ""

@@ -7,7 +7,8 @@ from cli.fingerprint import unlock_device
 from cli.password import write_dual_password, write_one_password
 from cli.pin_config import get_current_pins, pin_menu
 from cli.project_config import dual_devices_fun, serial_port, set_arduino
-from cli.utils import (get_arduino_device, get_config)
+from cli.utils import get_arduino_device, get_config
+from constant import PASSWORD_FILE
 
 app = typer.Typer()
 
@@ -80,7 +81,7 @@ def activate_fingerprint() -> None:
 
     unlock_device(arduino, port)
 
-    os.remove("../cpp/Fingerprint/password.h")
+    os.remove(PASSWORD_FILE)
 
 
 if __name__ == "__main__":

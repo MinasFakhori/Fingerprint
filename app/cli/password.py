@@ -21,4 +21,3 @@ def write_dual_password() -> None:
     with open(PASSWORD_FILE, "a") as file:
         file.write(f'\n#define PASSWORD2 "{input_password}"')
     print("Second password set successfully")
-

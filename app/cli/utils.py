@@ -1,8 +1,7 @@
 import os
+from typing import Dict, List
 
 import serial.tools.list_ports
-
-from typing import List, Dict
 
 
 def get_serial_port() -> str:
@@ -62,7 +61,7 @@ def get_arduino_device() -> str:
             print("Invalid input. Please enter a number.")
 
 
-def convert_txt_to_h(txt_file:str, h_file:str) -> None:
+def convert_txt_to_h(txt_file: str, h_file: str) -> None:
     with open(txt_file, "r") as txt:
         with open(h_file, "w") as h:
             for line in txt:
@@ -71,13 +70,13 @@ def convert_txt_to_h(txt_file:str, h_file:str) -> None:
                 h.write(line)
 
 
-def write_data_to_h_file(data:str, h_file:str) -> None:
+def write_data_to_h_file(data: str, h_file: str) -> None:
     with open(h_file, "w") as h:
         for line in data:
             h.write(line)
 
 
-def convert_range_arr(start: int, end:int) -> List[int]:
+def convert_range_arr(start: int, end: int) -> List[int]:
     arr = []
     for i in range(start, end + 1):
         arr.append(i)
@@ -109,7 +108,7 @@ def get_dual_device_ans() -> str:
         return "False\n"
 
 
-def get_config() -> Dict[str , str]:
+def get_config() -> Dict[str, str]:
     if not os.path.exists("resources/config.txt"):
         with open("resources/config.txt", "w") as file:
             file.write("")
