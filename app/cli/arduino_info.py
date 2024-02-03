@@ -1,7 +1,7 @@
 from cli.utils import convert_range_arr
 
 
-def arduino_pins(arduno_model):
+def arduino_pins(arduno_model: str) -> str:
     if arduno_model == "leonardo":
         return convert_range_arr(2, 19)
     elif arduno_model == "mega":

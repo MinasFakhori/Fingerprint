@@ -4,10 +4,11 @@ import time
 import serial
 
 from cli.utils import get_config
+from constant import ENROL
 
 
-def add_fingerprint_fun():
-    ARDUINO_SKETCH = "../cpp/Enroll/Enroll.ino"
+def add_fingerprint_fun() -> None:
+    ARDUINO_SKETCH = ENROL
     print("Adding Fingerprint")
 
     config = get_config()
@@ -36,7 +37,7 @@ def add_fingerprint_fun():
         )
 
 
-def read_data(port):
+def read_data(port: str) -> None:
     print("Reading serial output...")
 
     port = port.strip()

@@ -1,9 +1,10 @@
 import os
+from typing import Dict, List
 
 import serial.tools.list_ports
 
 
-def get_serial_port():
+def get_serial_port() -> str:
     ports = serial.tools.list_ports.comports()
     cu_devices = [port.device for port in ports]
 
@@ -26,7 +27,7 @@ def get_serial_port():
             print("Invalid input. Please enter a number.")
 
 
-def arduino_types_fun():
+def arduino_types_fun() -> List[str]:
     return [
         "leonardo",
         "mega",
@@ -37,7 +38,7 @@ def arduino_types_fun():
     ]
 
 
-def get_arduino_device():
+def get_arduino_device() -> str:
     arduino_types = arduino_types_fun()
 
     print("Please select corresponds Arduino device:")
@@ -60,7 +61,7 @@ def get_arduino_device():
             print("Invalid input. Please enter a number.")
 
 
-def convert_txt_to_h(txt_file, h_file):
+def convert_txt_to_h(txt_file: str, h_file: str) -> None:
     with open(txt_file, "r") as txt:
         with open(h_file, "w") as h:
             for line in txt:
@@ -69,27 +70,27 @@ def convert_txt_to_h(txt_file, h_file):
                 h.write(line)
 
 
-def write_data_to_h_file(data, h_file):
+def write_data_to_h_file(data: str, h_file: str) -> None:
     with open(h_file, "w") as h:
         for line in data:
             h.write(line)
 
 
-def convert_range_arr(start, end):
+def convert_range_arr(start: int, end: int) -> List[int]:
     arr = []
     for i in range(start, end + 1):
         arr.append(i)
     return arr
 
 
-def more_than_one_param(*args):
+def more_than_one_param(*args) -> bool:
     if sum((args)) > 1:
         return True
     else:
         return False
 
 
-def get_dual_device_ans():
+def get_dual_device_ans() -> str:
     input_ans = input("Do you want to use dual devices (i.e., two passwords)? (Y/n): ")
     if (
         input_ans.lower() == "y"
@@ -107,7 +108,7 @@ def get_dual_device_ans():
         return "False\n"
 
 
-def get_config():
+def get_config() -> Dict[str, str]:
     if not os.path.exists("resources/config.txt"):
         with open("resources/config.txt", "w") as file:
             file.write("")

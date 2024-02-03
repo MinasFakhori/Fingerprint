@@ -1,14 +1,15 @@
 from cli.utils import (get_arduino_device, get_dual_device_ans,
                        get_serial_port, write_data_to_h_file)
+from constant import PROJECT_CONFIG
 
 
-def project_config_base(project_type, fun, isDual):
+def project_config_base(project_type: str, fun: function, isDual: bool) -> None:
     old = "no {project_type}"
     user_input = ""
     new = ""
     lines = []
 
-    with open("resources/config.txt", "r") as config:
+    with open(PROJECT_CONFIG, "r") as config:
         lines_exist = False
         config_lines = config.readlines()
         for line in config_lines:
@@ -55,46 +56,13 @@ def project_config_base(project_type, fun, isDual):
                 )
 
 
-def serial_port():
+def serial_port() -> None:
     project_config_base("port", get_serial_port, isDual=False)
 
 
-def dual_devices_fun():
+def dual_devices_fun() -> None:
     project_config_base("dual_devices", get_dual_device_ans, isDual=True)
 
 
-def set_arduino():
+def set_arduino() -> None:
     project_config_base("arduino", get_arduino_device, isDual=False)
-
-
-# def serial_port():
-# old_port = "no port"
-# user_input = ""
-# port = ""
-# lines = []
-# with open("resources/config.txt", "r") as config:
-#     config_lines = config.readlines()
-#     for line in config_lines:
-#         if "PORT" in line:
-#             old_port = line.split("=")[1].strip()
-#         else:
-#             lines.append(line)
-
-
-# if old_port != "no port":
-#     print(f"Current port: {old_port}")
-#     user_input = input("Do you want to change the port? (Y/n): ")
-
-#     if user_input.lower() == "n" or user_input.lower() == "no" or user_input.lower() == "nah":
-#         print("Port not changed")
-#         exit()
-
-
-#     port = get_serial_port()
-
-#     lines.append(f"PORT={port}")
-
-#     str_lines = str(lines).replace("'", "").replace("[", "").replace("]", "\n").replace(",", "")
-
-#     with open("resources/config.txt", "w") as config:
-#         config.write(str_lines)

@@ -1,15 +1,16 @@
-from os import path
 from pathlib import Path
+from typing import Dict
 
 from cli.arduino_info import arduino_pins
 from cli.utils import convert_txt_to_h
+from constant import PIN_OUT_TXT
 
-text_file = Path("resources/pinout.txt")
+text_file = Path(PIN_OUT_TXT)
 
 device = ""
 
 
-def get_current_pins():
+def get_current_pins() -> Dict[str, str]:
     current_pins = {}
     with open(text_file) as file:
         pinout = file.readlines()
@@ -22,7 +23,7 @@ def get_current_pins():
     return current_pins
 
 
-def search_pin(pin_name):
+def search_pin(pin_name: str) -> str:
     pin_name = pin_name.upper()
     if '"' in pin_name or "'" in pin_name:
         pin_name = pin_name.replace('"', "").replace("'", "")
@@ -33,7 +34,7 @@ def search_pin(pin_name):
     return None
 
 
-def change_pins(pin_name, pin_value):
+def change_pins(pin_name: str, pin_value: str) -> None:
     pin_name = pin_name.upper()
     pin_value = int(pin_value)
 
@@ -49,7 +50,7 @@ def change_pins(pin_name, pin_value):
         file.writelines(lines)
 
 
-def pin_menu(device):
+def pin_menu(device: str) -> None:
 
     device = device.split(":")[2].strip()
 
@@ -77,7 +78,7 @@ def pin_menu(device):
         pin_validation(title, new_value)
 
 
-def pin_validation(pin_name, pin_value):
+def pin_validation(pin_name: str, pin_value: str) -> None:
 
     old_pin = {}
 
