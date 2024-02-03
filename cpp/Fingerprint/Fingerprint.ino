@@ -109,7 +109,7 @@ uint8_t getFingerprintID() {
       if (p == FINGERPRINT_OK && !fingerprint_used) {
         Serial.print("Found ID #"); Serial.print(finger.fingerID);
         Serial.print(" with confidence of "); Serial.println(finger.confidence);
-        if (isDevice){
+        if (!isDevice){
           Keyboard.print(PASSWORD1);
         }else{
            Keyboard.print(PASSWORD2);
