@@ -24,7 +24,7 @@ This project involves creating a biometric security system that utilizes an Ardu
 
 * **Arduino CLI** - To be able to use the tools in this project, you must have the Arduino CLI installed. 
 
-    For Mac users, you can install it by running the following command in your terminal:
+    For **Mac** users, you can install it by running the following command in your terminal:
     ```bash
     brew install arduino-cli
     ```
@@ -33,9 +33,6 @@ This project involves creating a biometric security system that utilizes an Ardu
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
 
-You can install it by running the following command in your terminal:
-```bash 
+    <br>
+    For **Windows** and **Linux** users, you can install it from [here](https://arduino.github.io/arduino-cli/0.35/installation/) .
 
-
-
-Download from [here](https://www.arduino.cc/en/software).
