@@ -1,6 +1,7 @@
 #include <Adafruit_Fingerprint.h>
 #include "config.h"
 
+// Credit to Adafruit for the following code, it's slighly modified xD
 
 SoftwareSerial mySerial(FINGERPRINT_MODULE_TXD_PIN, FINGERPRINT_MODULE_TOUCH_PIN);
 
