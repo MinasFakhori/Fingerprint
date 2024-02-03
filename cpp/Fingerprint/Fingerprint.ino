@@ -63,7 +63,7 @@ void loop() {
       } else {
         fingerprint_used = true;
       }
-         delay(100);
+         delay(200);
     }
   }
 
