@@ -66,7 +66,7 @@ This project involves creating a biometric security system that utilizes an Ardu
 
 ### Usage
 
-Note: You must have the Arduino connected to your computer and the fingerprint scanner connected to the Arduino. You can find the wiring diagram in the `diagram` directory.
+Note: You must have the Arduino connected to your computer and the fingerprint scanner connected to the Arduino. You can find the wiring diagram in the `diagrams` directory.
 
 1. Go to the `app` directory
     ```bash
