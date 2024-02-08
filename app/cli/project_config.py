@@ -1,6 +1,9 @@
 from cli.utils import (get_arduino_device, get_dual_device_ans,
                        get_serial_port, write_data_to_h_file)
 from constant import PROJECT_CONFIG
+import os
+
+
 
 
 def project_config_base(project_type: str, fun, isDual: bool) -> None:
@@ -8,6 +11,10 @@ def project_config_base(project_type: str, fun, isDual: bool) -> None:
     user_input = ""
     new = ""
     lines = []
+    
+    if not os.path.exists(PROJECT_CONFIG):
+        with open(PROJECT_CONFIG, "w") as config:
+            config.write("")
 
     with open(PROJECT_CONFIG, "r") as config:
         lines_exist = False
