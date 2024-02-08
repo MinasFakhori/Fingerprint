@@ -44,6 +44,11 @@ https://github.com/MinasFakhori/fingerprint/assets/77994660/a94cf099-456f-4cae-8
     arduino-cli lib install "Keyboard"
     ```
 
+* **Adafruit Fingerprint Sensor Library** - You can install the Adafruit Fingerprint Sensor Library by running the following command in your terminal:
+    ```bash
+    arduino-cli lib install "Adafruit Fingerprint Sensor Library"
+    ```
+
 ---
 ### Project Setup Software
 
