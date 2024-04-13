@@ -1,8 +1,8 @@
-# Fingerprint project cli tool - Unlock your device using Biometrics
+# Fingerprint project CLI tool - Unlock your device using Biometrics
 
 ### Overview
 
-This project involves creating a biometric security system that utilises an Arduino and a fingerprint scanner to unlock a PC or Mac. The system works by capturing and verifying fingerprints, allowing authorized users to access their computers.
+This project involves creating a biometric security system that utilises an Arduino and a fingerprint scanner to unlock a PC or Mac. The system captures and verifies fingerprints, allowing authorised users to access their computers.
 
 
 https://github.com/MinasFakhori/fingerprint/assets/77994660/a94cf099-456f-4cae-8b5d-222d2cbd5e2f
@@ -26,7 +26,7 @@ https://github.com/MinasFakhori/fingerprint/assets/77994660/a94cf099-456f-4cae-8
 
 * **Python** - You must have Python installed on your computer. You can download it from [here](https://www.python.org/downloads/).
 
-* **Arduino CLI** - To be able to use the tools in this project, you must have the Arduino CLI installed. 
+* **Arduino CLI** - To use the tools in this project, you must have the Arduino CLI installed. 
 
     For **Mac** users, you can install it by running the following command in your terminal:
     ```bash
